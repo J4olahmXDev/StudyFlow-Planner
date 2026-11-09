@@ -1,46 +1,45 @@
 # StudyFlow Planner
 
-ตัวจัดตารางเรียนและงานที่แยกข้อมูลตามเทอม ดูตารางครบ 7 วัน เช็กงานที่ใกล้ส่ง และแชร์เฉพาะหมวดที่เลือกได้ ซิงก์ชุดข้อมูลด้วยโค้ดโดยไม่ต้องสร้างบัญชี StudyFlow
+**English** · [ไทย](README.th.md)
 
-![StudyFlow Planner บน macOS](shots/StudyFlow-Timetable.png)
+Organize classes, assignments, and events by semester. See all seven days at a glance, track upcoming deadlines, and share just the parts of your planner you choose. Start planning right away and use a sync code when you want to access the same planner on another device.
 
-## มีอะไรในรุ่น 1.1.0
+![StudyFlow Planner on macOS](shots/StudyFlow-Timetable.png)
 
-- ธีม Soft Honey และ White / Lilac เลือกได้จาก Settings
-- เพิ่มหรือแก้คาบเรียนจากการ์ดบนตาราง และเปิดฟอร์มเพิ่มวิชา งาน หรือกิจกรรมเป็นป๊อปอัป
-- เว็บและ Windows ใช้ Noto Sans Thai ที่มากับแอปสำหรับภาษาไทยและอังกฤษ เว็บเก็บฟอนต์ไว้ในแคชเพื่อใช้ตอนออฟไลน์
+## What's new in 1.1.0
 
-## ดาวน์โหลด
+- Choose Soft Honey or White / Lilac in Settings.
+- Add subjects, assignments, and events from pop-up forms. Open a class on the timetable to view or edit it.
+- The web and Windows apps include Noto Sans Thai for Thai and English text. The web app caches the font for offline use.
 
-เปิดแท็บ **Releases** ของ GitHub แล้วเลือกไฟล์ตามระบบ
+## Download and install
 
-| ระบบ | ไฟล์ | วิธีใช้ |
+Open **Releases** on GitHub and choose the file for your device.
+
+| Platform | Download | How to open |
 | --- | --- | --- |
-| macOS 14 ขึ้นไป · Apple Silicon และ Intel | `StudyFlow-macOS-Universal.zip` | แตก ZIP แล้วเปิด `StudyFlow Planner.app` |
-| Windows 10 / 11 · x64 | `StudyFlow-Windows-x64.zip` | แตก ZIP ทั้งโฟลเดอร์ แล้วเปิด `StudyFlow Planner.exe` ต้องมี .NET Framework 4.8 และ [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section) |
-| iPhone / iPad | [StudyFlow Web](https://suanaph-studyflow-planner.netlify.app/) | เปิดผ่าน Safari → แชร์ → เพิ่มไปยังหน้าจอโฮม แล้วเริ่มใช้ได้ทันที |
+| macOS 14 or later · Apple Silicon and Intel | `StudyFlow-macOS-Universal.zip` | Extract the ZIP and open `StudyFlow Planner.app`. |
+| Windows 10 or 11 · x64 | `StudyFlow-Windows-x64.zip` | Extract the entire ZIP and open `StudyFlow Planner.exe`. Requires .NET Framework 4.8 and [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section). |
+| iPhone and iPad | [StudyFlow Web](https://suanaph-studyflow-planner.netlify.app/) | Open in Safari, then choose **Share → Add to Home Screen**. |
 
-รุ่น macOS นี้ใช้ลายเซ็น ad hoc และยังไม่ได้ notarize จึงอาจถูก Gatekeeper บล็อกเมื่อดาวน์โหลดผ่านเบราว์เซอร์ รุ่น Windows ยังไม่มีลายเซ็น Authenticode และยังต้องทดสอบบน Windows จริง ไฟล์ macOS ในชุดนี้เป็นแอป SwiftUI แบบสแตนด์อโลน ส่วนรุ่นที่มี Mac Widget ใช้ scheme **StudyFlow Mac** ใน Xcode พร้อม App Groups ของผู้สร้าง
+The macOS download is an ad hoc-signed SwiftUI app. It has not been notarized, so Gatekeeper may block a browser download. The Windows build is unsigned and has not yet been tested on a Windows device. To build with the native Mac widget, use the **StudyFlow Mac** scheme in Xcode and configure App Groups for your development team.
 
-## ซิงก์และแชร์
+## Sync and share
 
-- ในแอป Mac เปิด **Settings → ซิงก์ด้วยโค้ด** ปิดโหมดตัวอย่างก่อน แล้วสร้างหรือคัดลอกโค้ดส่วนตัว ใช้โค้ดนี้บนเครื่องของตัวเองเพื่อดูและแก้ชุดข้อมูลเดียวกัน
-- ถ้าจะแชร์ให้คนอื่นดู ให้ใช้ปุ่มแชร์ในหน้าตาราง เลือกตารางกับวิชา งาน หรือกิจกรรม แล้วส่งโค้ดแชร์และรหัสให้ผู้รับ
-- เว็บเปิดมาที่ตารางในเครื่องทันทีและใช้โค้ดเฉพาะตอนอยากซิงก์ Windows และเว็บเริ่มจัดตารางในเครื่องได้เลย หลังเชื่อมออนไลน์ครั้งแรกจะเก็บข้อมูลของชุดซิงก์แบบเข้ารหัสไว้ในเครื่อง เปิดด้วยโค้ดเดิมตอนออฟไลน์ได้ ระบบส่งงานที่แก้เมื่อแอปออนไลน์อีกครั้ง
-- Apple Watch รับข้อมูลจากแอป iPhone แบบ native ที่จับคู่ผ่าน Watch Connectivity
+- **Use your planner on another device.** On the Mac, turn off demo mode and go to **Settings → Sync with a code** (ซิงก์ด้วยโค้ด) to create or copy your personal sync code. Enter the same code on your other device to view and edit the same planner.
+- **Share selected information.** Use the share button on the timetable. Choose whether to include the timetable and subjects, assignments, or events, then send the share code and password to the recipient.
+- **Work offline.** The web and Windows apps can save a local planner immediately. After connecting to a synced planner online, they keep an encrypted local copy. Open it with the same code offline, and edits sync when the app reconnects.
+- **Apple Watch.** The watch companion receives data from the paired native iPhone app through Watch Connectivity.
 
-## สร้างจากซอร์ส
+## Build from source
 
-**macOS** ใช้ Swift 6 และ Xcode Command Line Tools แล้วรัน `./build-swift.sh` จากราก repo หรือเปิด `StudyFlow Planner.xcodeproj` ใน Xcode สำหรับแอปที่มีวิดเจ็ต
+- **macOS.** Use Swift 6 and Xcode Command Line Tools. Run `./build-swift.sh` from the repository root, or open `StudyFlow Planner.xcodeproj` in Xcode for the build with widgets.
+- **Windows x64.** Use the .NET SDK and run `dotnet build Windows/StudyFlow.Windows.csproj -c Release -p:Platform=x64`. Keep the files and folders beside the EXE in `Windows/bin/x64/Release/net48/`.
+- **Cloud sync.** The source ships with empty Supabase settings. Local planning works immediately. To enable cloud sync in the web and Windows builds, set your Project URL and Publishable Key in `Cloud/Web/config.mjs`. [Cloud setup guide](Cloud/SETUP.md)
+- **Tests.** Run `swift test` and `node --test Cloud/Tests/*.test.mjs`.
 
-**Windows x64** ใช้ .NET SDK แล้วรัน `dotnet build Windows/StudyFlow.Windows.csproj -c Release -p:Platform=x64` ผลลัพธ์อยู่ที่ `Windows/bin/x64/Release/net48/` เก็บไฟล์และโฟลเดอร์ข้าง EXE ไว้ด้วย
+## Publish a release
 
-ซอร์สเวอร์ชันนี้มีค่า Supabase ว่างสำหรับตั้งค่าเอง แอป Mac ใช้ข้อมูลในเครื่องได้ทันที ส่วน Windows และเว็บเปิดใช้ในเครื่องได้ทันที และตั้ง Project URL กับ Publishable Key ใน `Cloud/Web/config.mjs` เมื่อต้องการเชื่อมคลาวด์ ดู [วิธีตั้งค่า](Cloud/SETUP.md)
+Use the contents of `Source` as the repository root. Attach both platform ZIPs to the matching GitHub Release. [GitHub release guide](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 
-ทดสอบด้วย `swift test` และ `node --test Cloud/Tests/*.test.mjs`
-
-## จัดไฟล์บน GitHub
-
-ใช้ไฟล์ใน `Source` เป็นราก repository แล้วแนบ ZIP สำหรับ macOS และ Windows เป็น assets ใน GitHub Release เวอร์ชันเดียวกัน ดู [วิธีสร้าง GitHub Release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
-
-อ่านเรื่อง [การลงนามและ notarize แอป macOS](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution) ก่อนเผยแพร่รุ่นติดตั้งทั่วไป
+For wider macOS distribution, see [Apple's guide to notarizing macOS software](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution).
