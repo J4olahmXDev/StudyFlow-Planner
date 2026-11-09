@@ -1,0 +1,917 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000029 /* NextUpWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001D /* NextUpWidget.swift */; };
+		00000000000000000000002A /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000011 /* WidgetSnapshot.swift */; };
+		000000000000000000000030 /* NextUpWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001D /* NextUpWidget.swift */; };
+		000000000000000000000031 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000011 /* WidgetSnapshot.swift */; };
+		000000000000000000000037 /* NextUpWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001D /* NextUpWidget.swift */; };
+		000000000000000000000038 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000011 /* WidgetSnapshot.swift */; };
+		00000000000000000000003D /* StudyFlow Watch Widget.appex in Embed Watch Widget */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001B /* StudyFlow Watch Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		000000000000000000000042 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000001 /* App.swift */; };
+		000000000000000000000043 /* WatchTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000010 /* WatchTodayView.swift */; };
+		000000000000000000000044 /* WatchSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000F /* WatchSync.swift */; };
+		000000000000000000000045 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000011 /* WidgetSnapshot.swift */; };
+		000000000000000000000047 /* Watch.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000014 /* Watch.xcassets */; };
+		00000000000000000000004E /* StudyFlow Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 000000000000000000000018 /* StudyFlow Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		000000000000000000000050 /* StudyFlow Mobile Widget.appex in Embed Mobile Widget */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001A /* StudyFlow Mobile Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		000000000000000000000055 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000001 /* App.swift */; };
+		000000000000000000000056 /* CloudSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000002 /* CloudSettings.swift */; };
+		000000000000000000000057 /* CloudShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000003 /* CloudShare.swift */; };
+		000000000000000000000058 /* CloudSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000004 /* CloudSync.swift */; };
+		000000000000000000000059 /* Editors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000005 /* Editors.swift */; };
+		00000000000000000000005A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000006 /* MainView.swift */; };
+		00000000000000000000005B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000007 /* Models.swift */; };
+		00000000000000000000005C /* OverviewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000008 /* OverviewPage.swift */; };
+		00000000000000000000005D /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000009 /* Pages.swift */; };
+		00000000000000000000005E /* PlannerReplica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000A /* PlannerReplica.swift */; };
+		00000000000000000000005F /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000B /* ShareSheet.swift */; };
+		000000000000000000000060 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000C /* Store.swift */; };
+		000000000000000000000061 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000D /* Theme.swift */; };
+		000000000000000000000062 /* TimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000E /* TimetableView.swift */; };
+		000000000000000000000063 /* WatchSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000F /* WatchSync.swift */; };
+		000000000000000000000064 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000011 /* WidgetSnapshot.swift */; };
+		000000000000000000000066 /* Mobile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000013 /* Mobile.xcassets */; };
+		000000000000000000000067 /* CloudDeployment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000015 /* CloudDeployment.plist */; };
+		00000000000000000000006C /* StudyFlow Mac Widget.appex in Embed Mac Widget */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001C /* StudyFlow Mac Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		000000000000000000000071 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000001 /* App.swift */; };
+		000000000000000000000072 /* CloudSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000002 /* CloudSettings.swift */; };
+		000000000000000000000073 /* CloudShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000003 /* CloudShare.swift */; };
+		000000000000000000000074 /* CloudSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000004 /* CloudSync.swift */; };
+		000000000000000000000075 /* Editors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000005 /* Editors.swift */; };
+		000000000000000000000076 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000006 /* MainView.swift */; };
+		000000000000000000000077 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000007 /* Models.swift */; };
+		000000000000000000000078 /* OverviewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000008 /* OverviewPage.swift */; };
+		000000000000000000000079 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000009 /* Pages.swift */; };
+		00000000000000000000007A /* PlannerReplica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000A /* PlannerReplica.swift */; };
+		00000000000000000000007B /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000B /* ShareSheet.swift */; };
+		00000000000000000000007C /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000C /* Store.swift */; };
+		00000000000000000000007D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000D /* Theme.swift */; };
+		00000000000000000000007E /* TimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000E /* TimetableView.swift */; };
+		00000000000000000000007F /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000011 /* WidgetSnapshot.swift */; };
+		000000000000000000000081 /* StudyFlowIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001F /* StudyFlowIcon.icns */; };
+		000000000000000000000082 /* CloudDeployment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000015 /* CloudDeployment.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00000000000000000000003B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000025 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000000000000000000000033;
+			remoteInfo = "StudyFlow Watch Widget";
+		};
+		00000000000000000000004A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000025 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000000000000000000000049;
+			remoteInfo = "StudyFlow Watch";
+		};
+		00000000000000000000004C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000025 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00000000000000000000002C;
+			remoteInfo = "StudyFlow Mobile Widget";
+		};
+		00000000000000000000006A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000025 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00000000000000000000003A;
+			remoteInfo = "StudyFlow Mac Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00000000000000000000003E /* Embed Watch Widget */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				00000000000000000000003D /* StudyFlow Watch Widget.appex in Embed Watch Widget */,
+			);
+			name = "Embed Watch Widget";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000004F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				00000000000000000000004E /* StudyFlow Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000051 /* Embed Mobile Widget */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				000000000000000000000050 /* StudyFlow Mobile Widget.appex in Embed Mobile Widget */,
+			);
+			name = "Embed Mobile Widget";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000006D /* Embed Mac Widget */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				00000000000000000000006C /* StudyFlow Mac Widget.appex in Embed Mac Widget */,
+			);
+			name = "Embed Mac Widget";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000001 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		000000000000000000000002 /* CloudSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSettings.swift; sourceTree = "<group>"; };
+		000000000000000000000003 /* CloudShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudShare.swift; sourceTree = "<group>"; };
+		000000000000000000000004 /* CloudSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSync.swift; sourceTree = "<group>"; };
+		000000000000000000000005 /* Editors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editors.swift; sourceTree = "<group>"; };
+		000000000000000000000006 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		000000000000000000000007 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		000000000000000000000008 /* OverviewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewPage.swift; sourceTree = "<group>"; };
+		000000000000000000000009 /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
+		00000000000000000000000A /* PlannerReplica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerReplica.swift; sourceTree = "<group>"; };
+		00000000000000000000000B /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		00000000000000000000000C /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		00000000000000000000000D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		00000000000000000000000E /* TimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableView.swift; sourceTree = "<group>"; };
+		00000000000000000000000F /* WatchSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSync.swift; sourceTree = "<group>"; };
+		000000000000000000000010 /* WatchTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTodayView.swift; sourceTree = "<group>"; };
+		000000000000000000000011 /* WidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSnapshot.swift; sourceTree = "<group>"; };
+		000000000000000000000013 /* Mobile.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Mobile.xcassets; sourceTree = "<group>"; };
+		000000000000000000000014 /* Watch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Watch.xcassets; sourceTree = "<group>"; };
+		000000000000000000000015 /* CloudDeployment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CloudDeployment.plist; sourceTree = "<group>"; };
+		000000000000000000000017 /* StudyFlow Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "StudyFlow Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000018 /* StudyFlow Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "StudyFlow Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000019 /* StudyFlow Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "StudyFlow Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00000000000000000000001A /* StudyFlow Mobile Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; path = "StudyFlow Mobile Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00000000000000000000001B /* StudyFlow Watch Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; path = "StudyFlow Watch Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00000000000000000000001C /* StudyFlow Mac Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; path = "StudyFlow Mac Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00000000000000000000001D /* NextUpWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextUpWidget.swift; sourceTree = "<group>"; };
+		00000000000000000000001F /* StudyFlowIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = StudyFlowIcon.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		000000000000000000000012 /* Sources/Planner */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000001 /* App.swift */,
+				000000000000000000000002 /* CloudSettings.swift */,
+				000000000000000000000003 /* CloudShare.swift */,
+				000000000000000000000004 /* CloudSync.swift */,
+				000000000000000000000005 /* Editors.swift */,
+				000000000000000000000006 /* MainView.swift */,
+				000000000000000000000007 /* Models.swift */,
+				000000000000000000000008 /* OverviewPage.swift */,
+				000000000000000000000009 /* Pages.swift */,
+				00000000000000000000000A /* PlannerReplica.swift */,
+				00000000000000000000000B /* ShareSheet.swift */,
+				00000000000000000000000C /* Store.swift */,
+				00000000000000000000000D /* Theme.swift */,
+				00000000000000000000000E /* TimetableView.swift */,
+				00000000000000000000000F /* WatchSync.swift */,
+				000000000000000000000010 /* WatchTodayView.swift */,
+				000000000000000000000011 /* WidgetSnapshot.swift */,
+			);
+			path = Sources/Planner;
+			sourceTree = "<group>";
+		};
+		000000000000000000000016 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000013 /* Mobile.xcassets */,
+				000000000000000000000014 /* Watch.xcassets */,
+				000000000000000000000015 /* CloudDeployment.plist */,
+				00000000000000000000001F /* StudyFlowIcon.icns */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		00000000000000000000001E /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000001D /* NextUpWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		000000000000000000000020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000017 /* StudyFlow Planner.app */,
+				000000000000000000000018 /* StudyFlow Watch.app */,
+				000000000000000000000019 /* StudyFlow Mac.app */,
+				00000000000000000000001A /* StudyFlow Mobile Widget.appex */,
+				00000000000000000000001B /* StudyFlow Watch Widget.appex */,
+				00000000000000000000001C /* StudyFlow Mac Widget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000000000000000021 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000012 /* Sources/Planner */,
+				000000000000000000000016 /* Resources */,
+				00000000000000000000001E /* Widgets */,
+				000000000000000000000020 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00000000000000000000002C /* StudyFlow Mobile Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000028 /* Build configuration list for PBXNativeTarget "StudyFlow Mobile Widget" */;
+			buildPhases = (
+				00000000000000000000002B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StudyFlow Mobile Widget";
+			productName = "StudyFlow Mobile Widget";
+			productReference = 00000000000000000000001A /* StudyFlow Mobile Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		000000000000000000000033 /* StudyFlow Watch Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00000000000000000000002F /* Build configuration list for PBXNativeTarget "StudyFlow Watch Widget" */;
+			buildPhases = (
+				000000000000000000000032 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StudyFlow Watch Widget";
+			productName = "StudyFlow Watch Widget";
+			productReference = 00000000000000000000001B /* StudyFlow Watch Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		00000000000000000000003A /* StudyFlow Mac Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000036 /* Build configuration list for PBXNativeTarget "StudyFlow Mac Widget" */;
+			buildPhases = (
+				000000000000000000000039 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StudyFlow Mac Widget";
+			productName = "StudyFlow Mac Widget";
+			productReference = 00000000000000000000001C /* StudyFlow Mac Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		000000000000000000000049 /* StudyFlow Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000041 /* Build configuration list for PBXNativeTarget "StudyFlow Watch" */;
+			buildPhases = (
+				000000000000000000000046 /* Sources */,
+				000000000000000000000048 /* Resources */,
+				00000000000000000000003E /* Embed Watch Widget */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00000000000000000000003C /* PBXTargetDependency */,
+			);
+			name = "StudyFlow Watch";
+			productName = "StudyFlow Watch";
+			productReference = 000000000000000000000018 /* StudyFlow Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		000000000000000000000069 /* StudyFlow Planner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000054 /* Build configuration list for PBXNativeTarget "StudyFlow Planner" */;
+			buildPhases = (
+				000000000000000000000065 /* Sources */,
+				000000000000000000000068 /* Resources */,
+				00000000000000000000004F /* Embed Watch Content */,
+				000000000000000000000051 /* Embed Mobile Widget */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00000000000000000000004B /* PBXTargetDependency */,
+				00000000000000000000004D /* PBXTargetDependency */,
+			);
+			name = "StudyFlow Planner";
+			productName = "StudyFlow Planner";
+			productReference = 000000000000000000000017 /* StudyFlow Planner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		000000000000000000000084 /* StudyFlow Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000070 /* Build configuration list for PBXNativeTarget "StudyFlow Mac" */;
+			buildPhases = (
+				000000000000000000000080 /* Sources */,
+				000000000000000000000083 /* Resources */,
+				00000000000000000000006D /* Embed Mac Widget */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00000000000000000000006B /* PBXTargetDependency */,
+			);
+			name = "StudyFlow Mac";
+			productName = "StudyFlow Mac";
+			productReference = 000000000000000000000019 /* StudyFlow Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000025 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 2720;
+			};
+			buildConfigurationList = 000000000000000000000024 /* Build configuration list for PBXProject "StudyFlow Planner" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000021;
+			productRefGroup = 000000000000000000000020 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000069 /* StudyFlow Planner */,
+				000000000000000000000049 /* StudyFlow Watch */,
+				000000000000000000000084 /* StudyFlow Mac */,
+				00000000000000000000002C /* StudyFlow Mobile Widget */,
+				000000000000000000000033 /* StudyFlow Watch Widget */,
+				00000000000000000000003A /* StudyFlow Mac Widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000048 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000047 /* Watch.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000066 /* Mobile.xcassets in Resources */,
+				000000000000000000000067 /* CloudDeployment.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000083 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000081 /* StudyFlowIcon.icns in Resources */,
+				000000000000000000000082 /* CloudDeployment.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00000000000000000000002B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000029 /* NextUpWidget.swift in Sources */,
+				00000000000000000000002A /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000032 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000030 /* NextUpWidget.swift in Sources */,
+				000000000000000000000031 /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000037 /* NextUpWidget.swift in Sources */,
+				000000000000000000000038 /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000042 /* App.swift in Sources */,
+				000000000000000000000043 /* WatchTodayView.swift in Sources */,
+				000000000000000000000044 /* WatchSync.swift in Sources */,
+				000000000000000000000045 /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000065 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000055 /* App.swift in Sources */,
+				000000000000000000000056 /* CloudSettings.swift in Sources */,
+				000000000000000000000057 /* CloudShare.swift in Sources */,
+				000000000000000000000058 /* CloudSync.swift in Sources */,
+				000000000000000000000059 /* Editors.swift in Sources */,
+				00000000000000000000005A /* MainView.swift in Sources */,
+				00000000000000000000005B /* Models.swift in Sources */,
+				00000000000000000000005C /* OverviewPage.swift in Sources */,
+				00000000000000000000005D /* Pages.swift in Sources */,
+				00000000000000000000005E /* PlannerReplica.swift in Sources */,
+				00000000000000000000005F /* ShareSheet.swift in Sources */,
+				000000000000000000000060 /* Store.swift in Sources */,
+				000000000000000000000061 /* Theme.swift in Sources */,
+				000000000000000000000062 /* TimetableView.swift in Sources */,
+				000000000000000000000063 /* WatchSync.swift in Sources */,
+				000000000000000000000064 /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000080 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000071 /* App.swift in Sources */,
+				000000000000000000000072 /* CloudSettings.swift in Sources */,
+				000000000000000000000073 /* CloudShare.swift in Sources */,
+				000000000000000000000074 /* CloudSync.swift in Sources */,
+				000000000000000000000075 /* Editors.swift in Sources */,
+				000000000000000000000076 /* MainView.swift in Sources */,
+				000000000000000000000077 /* Models.swift in Sources */,
+				000000000000000000000078 /* OverviewPage.swift in Sources */,
+				000000000000000000000079 /* Pages.swift in Sources */,
+				00000000000000000000007A /* PlannerReplica.swift in Sources */,
+				00000000000000000000007B /* ShareSheet.swift in Sources */,
+				00000000000000000000007C /* Store.swift in Sources */,
+				00000000000000000000007D /* Theme.swift in Sources */,
+				00000000000000000000007E /* TimetableView.swift in Sources */,
+				00000000000000000000007F /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00000000000000000000003C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000000000000000000000033 /* StudyFlow Watch Widget */;
+			targetProxy = 00000000000000000000003B /* PBXContainerItemProxy */;
+		};
+		00000000000000000000004B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000000000000000000000049 /* StudyFlow Watch */;
+			targetProxy = 00000000000000000000004A /* PBXContainerItemProxy */;
+		};
+		00000000000000000000004D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00000000000000000000002C /* StudyFlow Mobile Widget */;
+			targetProxy = 00000000000000000000004C /* PBXContainerItemProxy */;
+		};
+		00000000000000000000006B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00000000000000000000003A /* StudyFlow Mac Widget */;
+			targetProxy = 00000000000000000000006A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		000000000000000000000026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Widgets/PlannerGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StudyFlow;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner.mobile.widget;
+				PRODUCT_NAME = "StudyFlow Mobile Widget";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = WIDGET_EXTENSION;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		000000000000000000000027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Widgets/PlannerGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StudyFlow;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner.mobile.widget;
+				PRODUCT_NAME = "StudyFlow Mobile Widget";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = WIDGET_EXTENSION;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		00000000000000000000002D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Widgets/WatchGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StudyFlow;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner.mobile.watchkitapp.widget;
+				PRODUCT_NAME = "StudyFlow Watch Widget";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = WIDGET_EXTENSION;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		00000000000000000000002E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Widgets/WatchGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StudyFlow;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner.mobile.watchkitapp.widget;
+				PRODUCT_NAME = "StudyFlow Watch Widget";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = WIDGET_EXTENSION;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		000000000000000000000034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Widgets/MacWidgetGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StudyFlow;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner.widget;
+				PRODUCT_NAME = "StudyFlow Mac Widget";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = WIDGET_EXTENSION;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		000000000000000000000035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Widgets/MacWidgetGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StudyFlow;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner.widget;
+				PRODUCT_NAME = "StudyFlow Mac Widget";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = WIDGET_EXTENSION;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		00000000000000000000003F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Widgets/WatchGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "StudyFlow Planner";
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = studio.daylight.planner.mobile;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner.mobile.watchkitapp;
+				PRODUCT_NAME = "StudyFlow Watch";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Widgets/WatchGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "StudyFlow Planner";
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = studio.daylight.planner.mobile;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner.mobile.watchkitapp;
+				PRODUCT_NAME = "StudyFlow Watch";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		000000000000000000000052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Widgets/PlannerGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "StudyFlow Planner";
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner.mobile;
+				PRODUCT_NAME = "StudyFlow Planner";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		000000000000000000000053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Widgets/PlannerGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "StudyFlow Planner";
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner.mobile;
+				PRODUCT_NAME = "StudyFlow Planner";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		00000000000000000000006E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widgets/PlannerGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "StudyFlow Planner";
+				INFOPLIST_KEY_CFBundleIconFile = StudyFlowIcon.icns;
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner;
+				PRODUCT_NAME = "StudyFlow Mac";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00000000000000000000006F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widgets/PlannerGroup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "StudyFlow Planner";
+				INFOPLIST_KEY_CFBundleIconFile = StudyFlowIcon.icns;
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = studio.daylight.planner;
+				PRODUCT_NAME = "StudyFlow Mac";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000024 /* Build configuration list for PBXProject "StudyFlow Planner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000022 /* Debug */,
+				000000000000000000000023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000028 /* Build configuration list for PBXNativeTarget "StudyFlow Mobile Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000026 /* Debug */,
+				000000000000000000000027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00000000000000000000002F /* Build configuration list for PBXNativeTarget "StudyFlow Watch Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00000000000000000000002D /* Debug */,
+				00000000000000000000002E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000036 /* Build configuration list for PBXNativeTarget "StudyFlow Mac Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000034 /* Debug */,
+				000000000000000000000035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000041 /* Build configuration list for PBXNativeTarget "StudyFlow Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00000000000000000000003F /* Debug */,
+				000000000000000000000040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000054 /* Build configuration list for PBXNativeTarget "StudyFlow Planner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000052 /* Debug */,
+				000000000000000000000053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000070 /* Build configuration list for PBXNativeTarget "StudyFlow Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00000000000000000000006E /* Debug */,
+				00000000000000000000006F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000025 /* Project object */;
+}

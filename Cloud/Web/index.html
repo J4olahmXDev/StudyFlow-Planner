@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>StudyFlow Planner</title>
+<link rel="icon" href="./folio.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="preload" href="./NotoSansThai-Variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="brand"><img src="./folio.svg" alt="" width="38" height="38"><strong>StudyFlow</strong></div>
+  <nav id="navigation" aria-label="เมนูหลัก"></nav>
+  <div class="sidebar-term" id="term-control"><label for="term-picker">My Term</label><div><span data-icon="graduation"></span><select id="term-picker"></select></div></div>
+  <div class="sidebar-bottom"><button data-page="settings" type="button"><span data-icon="settings"></span>Settings</button></div>
+</aside>
+<nav id="mobile-navigation" aria-label="เมนูหลัก">
+  <button data-page="timetable" type="button"><span data-icon="timetable"></span>ตาราง</button>
+  <button data-page="overview" type="button"><span data-icon="overview"></span>ภาพรวม</button>
+  <button data-page="tasks" type="button"><span data-icon="tasks"></span>งาน</button>
+  <button id="mobile-more" type="button"><span data-icon="more"></span>เพิ่มเติม</button>
+</nav>
+<main>
+  <header class="page-header">
+    <div><p id="overview-eyebrow" class="eyebrow" hidden>สมุดแพลนเนอร์</p><h1 id="page-title">ตารางเรียน</h1><p id="term-name-line"></p><div class="compact-meta"><button id="compact-term" class="text-button" type="button"></button><span id="compact-range"></span></div><p id="today-label"></p></div>
+    <div class="header-actions">
+      <div id="schedule-modes" class="segmented" aria-label="มุมมองตาราง">
+        <button data-mode="week" type="button">สัปดาห์</button><button data-mode="day" type="button">วัน</button><button data-mode="month" type="button">เดือน</button><button data-mode="list" type="button">รายการ</button>
+      </div>
+      <div class="header-tools">
+        <button id="open-search" class="circle" aria-label="ค้นหา" type="button"><span data-icon="search"></span></button>
+        <button id="open-notices" class="circle" aria-label="งานที่ใกล้กำหนดส่ง" type="button"><span data-icon="bell"></span><i id="notice-dot" hidden></i></button>
+        <button class="circle" data-page="settings" aria-label="ตั้งค่า" type="button"><span class="desktop-profile" data-icon="profile"></span><span class="mobile-gear" data-icon="settings"></span></button>
+      </div>
+    </div>
+  </header>
+  <section id="connect" class="panel" hidden>
+    <h2>ซิงก์หรือเปิดชุดแชร์</h2>
+    <p class="muted">ตารางบนเครื่องเปิดใช้ได้ทันที ส่วนโค้ดใช้เมื่ออยากเชื่อมกับอุปกรณ์อื่นค่ะ</p>
+    <form id="join">
+      <div class="actions">
+        <label>โค้ดจาก StudyFlow<input id="code" autocomplete="off" autocapitalize="characters" spellcheck="false" required></label>
+        <label>รหัสชุดแชร์<input id="share-password" type="password" autocomplete="off" spellcheck="false"></label>
+        <button>เชื่อม</button>
+      </div>
+    </form>
+    <p class="muted">ใช้โค้ดซิงก์ส่วนตัวเพื่อดูตารางและแก้งาน กรอกโค้ดเดิมอีกครั้งเมื่อเปิดใหม่ได้แม้ออฟไลน์หลังซิงก์ครั้งแรก</p>
+    <div id="create-sync-actions" class="actions">
+      <button id="create-sync" type="button">สร้างโค้ดจากข้อมูลในเครื่อง</button>
+      <button id="cancel-connect" class="plain" type="button">กลับไปตาราง</button>
+    </div>
+    <p id="connection-status" role="status" aria-live="polite"></p>
+    <label id="created-code-label" hidden>โค้ดซิงก์ส่วนตัวที่สร้างไว้<input id="created-code" readonly autocomplete="off"></label>
+    <p class="muted">ถ้าได้รับชุดแชร์ ให้กรอกทั้งโค้ดและรหัสเพื่อเปิดดูขณะออนไลน์</p>
+  </section>
+  <p id="status" class="app-status" role="status" aria-live="polite"></p>
+  <div id="planner" hidden>
+    <section id="settings-section" class="panel detail-page" hidden>
+      <h2>การตั้งค่า</h2>
+      <label class="sample-toggle"><input id="demo-toggle" type="checkbox"> ใช้ข้อมูลตัวอย่าง</label><label for="theme-picker">ธีม</label><select id="theme-picker"><option value="classic">Classic</option><option value="retro">Retro</option><option value="honey">Soft Honey</option><option value="lilac">White / Lilac</option></select>
+      <h2>My Term</h2>
+      <button class="primary open-editor" type="button" data-editor="term"><span data-icon="plus"></span>เพิ่มเทอม</button>
+    <div class="actions settings-actions">
+      <button id="show-connect" class="plain">ซิงก์หรือเปิดชุดแชร์</button>
+      <button id="refresh" hidden>ซิงก์ตอนนี้</button>
+      <button id="disconnect" class="plain" hidden>กลับไปข้อมูลในเครื่อง</button>
+    </div>
+      <label id="windows-widget-option" hidden><input id="windows-widget-enabled" type="checkbox"> แสดงข้อมูลบน Windows Widgets Board</label>
+    </section>
+    <section id="overview-section" hidden></section>
+    <section id="notes-section" class="panel detail-page" hidden><h2>โน้ตจากงาน</h2><div id="notes"></div></section>
+    <section id="analytics-section" class="panel detail-page" hidden><h2>ความคืบหน้า</h2><div id="analytics"></div></section>
+    <div id="schedule-layout">
+      <div class="week-toolbar">
+        <div class="period-controls">
+          <button id="previous-period" class="circle" aria-label="ช่วงก่อนหน้า" type="button"><span data-icon="left"></span></button>
+          <button id="next-period" class="circle" aria-label="ช่วงถัดไป" type="button"><span data-icon="right"></span></button>
+          <button id="today-period" class="period-chip" aria-label="เลือกช่วงวันที่" type="button"><span id="period-title"></span><span data-icon="down"></span></button>
+          <strong id="period-range"></strong>
+        </div>
+        <div class="toolbar-tools">
+          <button id="share-control" class="circle" type="button" aria-label="ซิงก์หรือเปิดชุดแชร์"><span data-icon="share"></span></button>
+          <button id="add-class" class="primary" type="button" aria-label="เพิ่มวิชา"><span data-icon="plus"></span><span id="add-class-label">เพิ่มวิชา</span></button>
+          <button id="schedule-more" class="circle" type="button" aria-label="ตัวเลือกตารางเรียน"><span data-icon="more"></span></button>
+        </div>
+      </div>
+      <div class="schedule-columns">
+    <section class="panel" id="schedule-section">
+      <div id="timetable" aria-label="ตารางเรียน"></div>
+    </section>
+      <aside class="week-rail">
+        <section class="panel rail-card"><div class="rail-heading"><h2><span data-icon="tasks"></span>งานในสัปดาห์นี้</h2><button class="text-button" data-page="tasks" type="button">ดูทั้งหมด →</button></div><div id="week-tasks"></div></section>
+        <section class="panel rail-card"><h2>สรุปสัปดาห์</h2><div id="week-summary"></div></section>
+        <section class="panel rail-card" id="next-up"><h2>ช่วงเวลาถัดไป</h2><div id="next-class"></div></section>
+        <section id="widget-card" class="panel next-widget" aria-label="วิดเจ็ต StudyFlow"><div id="widget-term"></div><div id="widget-class"></div><div id="widget-task"></div></section>
+      </aside>
+      </div>
+    </div>
+    <section class="panel detail-page" id="tasks-section">
+      <h2>งาน</h2>
+      <button class="primary open-editor" type="button" data-editor="task"><span data-icon="plus"></span>เพิ่มงาน</button>
+      <div id="tasks"></div>
+    </section>
+    <section class="panel detail-page" id="events-section">
+      <h2>กิจกรรม</h2><div id="events"></div>
+      <button class="primary open-editor" type="button" data-editor="event"><span data-icon="plus"></span>เพิ่มกิจกรรม</button>
+    </section>
+    <section class="panel detail-page" id="subjects-section">
+      <h2>วิชา</h2><div id="subjects"></div>
+      <button class="primary open-editor" type="button" data-editor="subject"><span data-icon="plus"></span>เพิ่มวิชา</button>
+    </section>
+  </div>
+  <dialog id="edit-term" class="editor-dialog" aria-labelledby="title-term">
+    <header class="popup-title"><div><h2 id="title-term">เพิ่มเทอม</h2><p>จัดข้อมูลเรียนแยกตามภาคเรียน</p></div><button class="popup-close" type="button" data-close-editor aria-label="ปิด">×</button></header>
+    <form id="new-term" class="popup-form">
+      <div class="popup-fields"><label>ชื่อเทอม<input id="term-name" placeholder="เช่น ภาคเรียนที่ 1 / 2569" required maxlength="80"></label></div>
+      <p class="popup-status" role="status"></p>
+      <footer class="popup-actions"><button class="plain" type="button" data-close-editor>ยกเลิก</button><button class="primary" type="submit">บันทึก</button></footer>
+    </form>
+  </dialog>
+  <dialog id="edit-class" class="editor-dialog" aria-labelledby="title-class">
+    <header class="popup-title"><div><h2 id="title-class">เพิ่มคาบเรียน</h2><p>แสดงในตารางทุกสัปดาห์</p></div><button class="popup-close" type="button" data-close-editor aria-label="ปิด">×</button></header>
+    <form id="new-class" class="popup-form">
+      <div class="popup-fields"><label>วิชาของคาบ<select id="class-subject" required></select></label>
+          <label>วัน<select id="class-day" required></select></label>
+          <label>เริ่ม<input id="class-start" type="time" required></label>
+          <label>จบ<input id="class-end" type="time" required></label>
+          <label>ประเภท<select id="class-kind"><option value="">ไม่ระบุ</option><option value="LEC">LEC</option><option value="LAB">LAB</option></select></label>
+          <label>อาคาร<input id="class-building" placeholder="เช่น EN" maxlength="80"></label>
+          <label>ห้อง<input id="class-room" placeholder="เช่น 406" maxlength="80"></label></div>
+      <p class="popup-status" role="status"></p>
+      <footer class="popup-actions"><button class="plain" type="button" data-close-editor>ยกเลิก</button><button class="primary" type="submit">บันทึก</button></footer>
+    </form>
+  </dialog>
+  <dialog id="edit-task" class="editor-dialog" aria-labelledby="title-task">
+    <header class="popup-title"><div><h2 id="title-task">เพิ่มงาน</h2><p>รายละเอียดงานและกำหนดส่ง</p></div><button class="popup-close" type="button" data-close-editor aria-label="ปิด">×</button></header>
+    <form id="new-task" class="popup-form">
+      <div class="popup-fields"><label>ชื่องาน<input id="task-title" placeholder="เช่น ส่งรายงาน" required maxlength="200"></label>
+        <label>กำหนดส่ง<input id="task-due" type="datetime-local" required></label>
+        <label>วิชา<select id="task-subject"><option value="">ไม่ผูกวิชา</option></select></label></div>
+      <p class="popup-status" role="status"></p>
+      <footer class="popup-actions"><button class="plain" type="button" data-close-editor>ยกเลิก</button><button class="primary" type="submit">บันทึก</button></footer>
+    </form>
+  </dialog>
+  <dialog id="edit-event" class="editor-dialog" aria-labelledby="title-event">
+    <header class="popup-title"><div><h2 id="title-event">เพิ่มกิจกรรม</h2><p>กำหนดเวลาและสถานที่ในปฏิทิน</p></div><button class="popup-close" type="button" data-close-editor aria-label="ปิด">×</button></header>
+    <form id="new-event" class="popup-form">
+      <div class="popup-fields"><label>ชื่อกิจกรรม<input id="event-title" placeholder="เช่น นัดทำงานกลุ่ม" maxlength="200" required></label>
+        <label>เริ่ม<input id="event-start" type="datetime-local" required></label>
+        <label>จบ<input id="event-end" type="datetime-local" required></label></div>
+      <p class="popup-status" role="status"></p>
+      <footer class="popup-actions"><button class="plain" type="button" data-close-editor>ยกเลิก</button><button class="primary" type="submit">บันทึก</button></footer>
+    </form>
+  </dialog>
+  <dialog id="edit-subject" class="editor-dialog" aria-labelledby="title-subject">
+    <header class="popup-title"><div><h2 id="title-subject">เพิ่มวิชา</h2><p>จัดการชื่อ รหัสวิชา และสีบนตาราง</p></div><button class="popup-close" type="button" data-close-editor aria-label="ปิด">×</button></header>
+    <form id="new-subject" class="popup-form">
+      <div class="popup-fields"><label>ชื่อวิชา<input id="subject-name" placeholder="เช่น Data Analytics" maxlength="200" required></label>
+        <label>รหัสวิชา<input id="subject-code" placeholder="เช่น 301233" maxlength="40"></label>
+        <label>ผู้สอน<input id="subject-teacher" maxlength="120"></label>
+        <label>สี<select id="subject-color"><option value="0">Sage</option><option value="1">Blue</option><option value="2">Lavender</option><option value="3">Apricot</option><option value="4">Teal</option><option value="5">Rose</option><option value="6">Green</option><option value="7">Amber</option><option value="8">Slate</option><option value="9">Sky</option></select></label></div>
+      <p class="popup-status" role="status"></p>
+      <footer class="popup-actions"><button class="plain" type="button" data-close-editor>ยกเลิก</button><button class="primary" type="submit">บันทึก</button></footer>
+    </form>
+  </dialog>
+  <dialog id="control-dialog" aria-labelledby="control-title">
+    <form method="dialog" class="rail-heading"><h2 id="control-title"></h2><button aria-label="ปิด" type="submit">×</button></form>
+    <div id="control-items"></div>
+  </dialog>
+  <dialog id="quick-dialog">
+    <form method="dialog" class="rail-heading"><h2 id="quick-title"></h2><button aria-label="ปิด" type="submit">×</button></form>
+    <label id="quick-search-label">ค้นหาวิชาและงาน<input id="quick-search" type="search" autocomplete="off"></label>
+    <div id="quick-results"></div>
+  </dialog>
+</main>
+</body>
+</html>
